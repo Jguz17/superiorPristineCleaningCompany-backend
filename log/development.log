@@ -1146,3 +1146,36 @@ Processing by Api::V1::ThrashesController#index as HTML
 Completed 200 OK in 16ms (Views: 12.0ms | ActiveRecord: 2.9ms | Allocations: 8666)
 
 
+Started GET "/api/v1/thrashes/1" for ::1 at 2020-09-07 02:26:27 -0500
+Processing by Api::V1::ThrashesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mThrash Load (0.2ms)[0m  [1m[34mSELECT "thrashes".* FROM "thrashes" WHERE "thrashes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/thrashes_controller.rb:11:in `show'
+Completed 204 No Content in 10ms (ActiveRecord: 0.4ms | Allocations: 2497)
+
+
+Started GET "/api/v1/thrashes/1" for ::1 at 2020-09-07 02:26:30 -0500
+Processing by Api::V1::ThrashesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mThrash Load (0.3ms)[0m  [1m[34mSELECT "thrashes".* FROM "thrashes" WHERE "thrashes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/thrashes_controller.rb:11:in `show'
+Completed 204 No Content in 1ms (ActiveRecord: 0.3ms | Allocations: 616)
+
+
+Started GET "/api/v1/thrashes" for ::1 at 2020-09-07 02:26:41 -0500
+Processing by Api::V1::ThrashesController#index as HTML
+  [1m[36mThrash Load (0.3ms)[0m  [1m[34mSELECT "thrashes".* FROM "thrashes"[0m
+  ↳ app/controllers/api/v1/thrashes_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.34ms)
+Completed 200 OK in 16ms (Views: 10.2ms | ActiveRecord: 3.3ms | Allocations: 8552)
+
+
+Started GET "/api/v1/thrashes/1" for ::1 at 2020-09-07 02:26:44 -0500
+Processing by Api::V1::ThrashesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mThrash Load (0.2ms)[0m  [1m[34mSELECT "thrashes".* FROM "thrashes" WHERE "thrashes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/thrashes_controller.rb:11:in `show'
+[active_model_serializers] Rendered ThrashSerializer with ActiveModelSerializers::Adapter::Attributes (0.24ms)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 986)
+
+

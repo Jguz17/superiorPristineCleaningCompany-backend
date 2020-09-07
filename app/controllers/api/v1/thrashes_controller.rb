@@ -9,6 +9,8 @@ class Api::V1::ThrashesController < ApplicationController
 
     def show 
         thrash = Thrash.find(params[:id])
+
+        render json: thrash
     end
 
     def destroy

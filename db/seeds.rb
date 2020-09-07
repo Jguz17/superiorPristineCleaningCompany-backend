@@ -7,3 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create(username: 'test', password: '123')
+
+Booking.create(user_id: 1, name: 'test booking', email: 'testemail@anon.com', phone: '5555555555', address: '123 test ave', datetime: '2020/9/6 23:54', message: 'trybuni')
+
+AcceptedBooking.create(user_id: 1, name: 'test anon nookfd', email: 'yager@anon.com', phone: '1231231234', address: '123 tank ave', datetime: '2020/9/7 00:18', message: 'yeerrrrr')
+
+Message.create(user_id: 1, name: 'test booking', email: 'testemail@anon.com', phone: '5555555555', content: 'lfibs ofbdfspnso b b')

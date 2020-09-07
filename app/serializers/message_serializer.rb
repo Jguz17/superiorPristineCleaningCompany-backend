@@ -1,3 +1,3 @@
 class MessageSerializer < ActiveModel::Serializer
-  attributes :id, :name, :email, :phone, :content
+  attributes :user_id, :id, :name, :email, :phone, :content
 end

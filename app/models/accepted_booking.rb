@@ -1,0 +1,2 @@
+class AcceptedBooking < ApplicationRecord
+end

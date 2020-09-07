@@ -44,6 +44,7 @@ class Api::V1::AcceptedBookingsController < ApplicationController
 
     def destroy
         AcceptedBooking.find(params[:id]).destroy
+        
         render json: {message: 'success'}
     end
 end

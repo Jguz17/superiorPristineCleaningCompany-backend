@@ -51,11 +51,13 @@ ActiveRecord::Schema.define(version: 2020_09_07_033452) do
   end
 
   create_table "thrashes", force: :cascade do |t|
+    t.integer "user_id"
     t.string "name"
     t.string "email"
     t.string "phone"
+    t.string "address"
     t.string "datetime"
-    t.string "message"
+    t.string "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

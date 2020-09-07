@@ -2,7 +2,7 @@ class Api::V1::ThrashesController < ApplicationController
     skip_before_action :authorized
 
     def index 
-        thrasher = Thrash.all
+        thrashes = Thrash.all
 
         render json: thrashes
     end

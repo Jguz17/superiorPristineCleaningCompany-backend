@@ -13,3 +13,5 @@ Booking.create(user_id: 1, name: 'test booking', email: 'testemail@anon.com', ph
 AcceptedBooking.create(user_id: 1, name: 'test anon nookfd', email: 'yager@anon.com', phone: '1231231234', address: '123 tank ave', datetime: '2020/9/7 00:18', message: 'yeerrrrr')
 
 Message.create(user_id: 1, name: 'test booking', email: 'testemail@anon.com', phone: '5555555555', content: 'lfibs ofbdfspnso b b')
+
+Thrash.create(user_id: 1, name: 'dgd  bfsbouagshgwgp9 wh  w', email: 'mrbot@test.com', phone: '1231231234', address: '123 tank ave', datetime: '2020/9/7 02:14', content: 'yeerrrrr', type: 'message')

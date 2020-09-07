@@ -884,3 +884,47 @@ Processing by Api::V1::MessagesController#index as HTML
 Completed 200 OK in 15ms (Views: 10.8ms | ActiveRecord: 2.9ms | Allocations: 7941)
 
 
+Started GET "/api/v1/accepted-bookings" for ::1 at 2020-09-07 02:04:42 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/accepted-bookings"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/accepted_bookings" for ::1 at 2020-09-07 02:04:49 -0500
+Processing by Api::V1::AcceptedBookingsController#index as HTML
+  [1m[36mAcceptedBooking Load (4.4ms)[0m  [1m[34mSELECT "accepted_bookings".* FROM "accepted_bookings"[0m
+  ↳ app/controllers/api/v1/accepted_bookings_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.57ms)
+Completed 200 OK in 23ms (Views: 11.3ms | ActiveRecord: 9.6ms | Allocations: 8792)
+
+
+Started GET "/api/v1/accepted_bookings/1" for ::1 at 2020-09-07 02:08:46 -0500
+Processing by Api::V1::AcceptedBookingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAcceptedBooking Load (0.3ms)[0m  [1m[34mSELECT "accepted_bookings".* FROM "accepted_bookings" WHERE "accepted_bookings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/accepted_bookings_controller.rb:9:in `show'
+[active_model_serializers] Rendered AcceptedBookingSerializer with ActiveModelSerializers::Adapter::Attributes (0.28ms)
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.5ms | Allocations: 1017)
+
+

@@ -8,7 +8,7 @@ class CreateThrashes < ActiveRecord::Migration[6.0]
       t.string :address, :defailt => nil
       t.string :datetime, :defailt => nil
       t.string :content
-      t.string :type
+      t.string :thrash_type
 
       t.timestamps
     end

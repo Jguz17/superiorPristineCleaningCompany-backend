@@ -6,7 +6,7 @@ class CreateAcceptedBookings < ActiveRecord::Migration[6.0]
       t.string :email
       t.string :phone
       t.string :address
-      t.string :datetime
+      t.datetime :datetime
       t.string :message
 
       t.timestamps

@@ -1365,3 +1365,28 @@ Processing by Api::V1::BookingsController#index as HTML
 Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.4ms | Allocations: 1382)
 
 
+Started GET "/" for ::1 at 2020-09-07 22:32:14 -0500
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/john/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/john/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 9.2ms | Allocations: 315)
+Completed 200 OK in 17ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 1597)
+
+
+Started GET "/api/v1/bookings/1" for ::1 at 2020-09-07 22:32:17 -0500
+Processing by Api::V1::BookingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBooking Load (2.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/bookings_controller.rb:9:in `show'
+[active_model_serializers] Rendered BookingSerializer with ActiveModelSerializers::Adapter::Attributes (0.84ms)
+Completed 200 OK in 46ms (Views: 13.2ms | ActiveRecord: 9.8ms | Allocations: 10768)
+
+
+Started GET "/api/v1/bookings/" for ::1 at 2020-09-07 22:32:18 -0500
+Processing by Api::V1::BookingsController#index as HTML
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/controllers/api/v1/bookings_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.53ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 1438)
+
+
